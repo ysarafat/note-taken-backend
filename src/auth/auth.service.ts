@@ -19,8 +19,7 @@ export class AuthService {
       registerDto.email,
       hashedPassword,
     );
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { password, ...result } = newUser;
-    return result;
+
+    return newUser;
   }
 }

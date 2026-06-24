@@ -13,6 +13,9 @@ export class UserService {
         email,
         password,
       },
+      omit: {
+        password: true, // Exclude password from the result
+      },
     });
     return user;
   }
@@ -23,5 +26,15 @@ export class UserService {
       where: { email },
     });
     return user;
+  }
+
+  // get all users method to retrieve all users
+  async getAllUsers() {
+    const users = await this.prismaService.user.findMany({
+      omit: {
+        password: true, // Exclude password from the result
+      },
+    });
+    return users;
   }
 }

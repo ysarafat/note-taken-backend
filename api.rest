@@ -6,6 +6,11 @@ Content-Type: application/json
 
 {
   "name": "Arafat",
-  "email": "test@emaidfl.com",
+  "email": "test@gmail.com",
   "password": "TestPWD@123"
 } 
+
+###
+
+GET http://localhost:3000/user
+`
