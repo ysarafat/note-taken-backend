@@ -1,24 +1,36 @@
-http://localhost:3000
+http://localhost:3000/api
 
 ###
-POST http://localhost:3000/auth/register
+POST http://localhost:3000/api/auth/register
 Content-Type: application/json
 
 {
   "name": "Arafat",
-  "email": "test2@gmail.com",
+  "email": "arafat@acx.com",
   "password": "TestPWD@123"
 } 
 
 ###
-
-GET http://localhost:3000/user
-
-###
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "test2@gmail.com",
-  "password": "TestPWD@123t"
+  "email": "arafat@acx.com",
+  "password": "TestPWD@123"
 } 
+###
+
+GET http://localhost:3000/api/users
+
+###
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDNhNWU1Yy01Y2MxLTRkNTEtOWM4Ny1lNTUyYWU0ODE1ZmMiLCJlbWFpbCI6ImFyYWZhdEBhY3guY29tIiwiaWF0IjoxNzgyMzMzMTg0LCJleHAiOjE3ODIzMzMyNDR9.uK3iCLKGY9Bukx9dLw3YxSld7hDI7ADwMqh_y_ri-JY
+
+{
+  "title": "Note 1",
+  "description": "This is note description"
+} 
+
+###
+GET http://localhost:3000/api/notes
