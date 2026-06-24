@@ -1,11 +1,11 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class AppService {
   getHello() {
     return {
       status: 200,
-      message: 'Server is running successfully',
+      message: "Server is running successfully",
     };
   }
 }
